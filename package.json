@@ -1,0 +1,35 @@
+{
+	"name": "permutations.ahk",
+	"version": "0.1.0",
+	"description": "Generates all possible permutations of the input array or string using [Heap's algorithm](https://en.wikipedia.org/wiki/Heap%27s_algorithm), which minimizes movement.",
+	"main": "export.ahk",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Chunjee/permutations.ahk.git"
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"unit-testing.ahk": "^0.3.3"
+	},
+	"author": "Shawn Brooker",
+	"contributors": [
+		{
+			"name": "Shawn Brooker",
+			"url": "https://github.com/chunjee"
+		}
+	],
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/Chunjee/permutations.ahk"
+	},
+	"homepage": "https://github.com/Chunjee/permutations.ahk",
+	"keywords": [
+		"autohotkey",
+		"ahk",
+		"array",
+		"permutations",
+		"heaps algorithm",
+		"heap",
+		"sequence"
+	]
+}
