@@ -6,14 +6,12 @@ class permutations {
 		; prepare inputs
 		if (!IsObject(param_array)) {
 			param_array := StrSplit(param_array)
-		} else {
-			; param_array := param_array.Clone()
 		}
 
 		; create
 		this.outArray := []
 		l_length := param_array.Count()
-		l_permutationsArray := this._gen(l_length, param_array, param_maxPermutations)
+		l_permutationsArray := this._gen(l_length, param_array.Clone(), param_maxPermutations)
 
 		; return array of arrays if user didn't specify param_stringOut
 		if (param_stringOut == false) {

@@ -7,7 +7,6 @@ SetBatchLines, -1
 #Include biga.ahk\export.ahk
 
 assert := new unittesting()
-heapsalgo := new permutations()
 
 assert.label("generate - perform on short string")
 assert.test(permutations.generate("hey").Count(), 6)
@@ -26,7 +25,6 @@ assert.test(out[120], ["3","2","5","4","1"])
 assert.label("generate - perform on string array")
 assert.test(permutations.generate(["Auto", "Hot", "key"], ["AutoHotkey", "HotAutokey", "keyAutoHot", "AutokeyHot", "HotkeyAuto", "keyHotAuto"]))
 
-
 assert.label("generate - limit number of outputs")
 assert.test(permutations.generate("AutoHotkey", true, 1).Count(), 1)
 assert.test(permutations.generate("AutoHotkey", true, 2).Count(), 2)
@@ -34,6 +32,16 @@ assert.test(permutations.generate("AutoHotkey", true, 10).Count(), 10)
 assert.test(permutations.generate("AutoHotkey", true, 20).Count(), 20)
 assert.test(permutations.generate("AutoHotkey", true, 100).Count(), 100)
 assert.test(permutations.generate("AutoHotkey", true, 200).Count(), 200)
+
+assert.label("generate - ensure no mutation on input string")
+string := "ahk"
+permutations.generate(string)
+assert.test(string, "ahk")
+
+assert.label("generate - ensure no mutation on input array")
+array := [1,2,3,4,5]
+permutations.generate(array)
+assert.test(array, [1,2,3,4,5])
 
 
 assert.fullReport()
