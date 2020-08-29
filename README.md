@@ -34,13 +34,13 @@ result := permutations.generate("AutoHotkey", true, 3)
 ## API
 Including the module provides an object with one method: `.generate`
 
-### compareTwoStrings(array, [stringOut, maxPermutations])
+### generate(array, [stringOut, maxPermutations])
 Returns an array containing all possible permutations.
 
 ##### Arguments
 1. array (*): The array or string to find permutations of
-2. stringOut (bool): Optional, whether or not not elements of the return array should be combined into strings. Default is false meaning the result will be an array of arrays. 
-3. maxPermutations (number): Optional, whether or not the number of permutations should be capped. This may be useful when dealing with a number of permutations that would otherwise take an excessive time to compute.
+2. stringOut (bool): Optional, whether or not not elements of the return array should be combined into strings. Default is false meaning the result will be an array of arrays.
+3. maxPermutations (number): Optional, whether or not the number of permutations should be capped. This may be useful when dealing with a number of permutations that would otherwise take an excessive ammount of time to compute.
 
 ##### Returns
 (array): An array containing all permutations.

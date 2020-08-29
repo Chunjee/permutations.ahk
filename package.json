@@ -1,6 +1,6 @@
 {
 	"name": "permutations.ahk",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "Generates all possible permutations of the input array or string using [Heap's algorithm](https://en.wikipedia.org/wiki/Heap%27s_algorithm), which minimizes movement.",
 	"main": "export.ahk",
 	"repository": {
@@ -9,7 +9,7 @@
 	},
 	"dependencies": { },
 	"devDependencies": {
-		"unit-testing.ahk": "^0.3.3"
+		"unit-testing.ahk": "^0.3.1"
 	},
 	"author": "Shawn Brooker",
 	"contributors": [
