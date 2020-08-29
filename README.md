@@ -21,7 +21,7 @@ In your code:
 result := permutations.generate("ahk")
 ; => [["a","h","k"], ["h","a","k"], ["k","a","h"], ["a","k","h"], ["h","k","a"], ["k","h","a"]]
 
-result := permutations.generate("ted", true)
+result := permutations.generate("ahk", true)
 ; => ["ahk", "hak", "kah", "akh", "hka", "kha"]
 
 result := permutations.generate(["Auto", "Hot", "key"], true)
