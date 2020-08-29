@@ -18,10 +18,17 @@ In your code:
 #Include %A_ScriptDir%\node_modules
 #Include permutations.ahk\export.ahk
 
-results := permutations.generate("ted")
-; => []
-permutations.generate("ted", true)
-; => ["ted"]
+result := permutations.generate("ahk")
+; => [["a","h","k"], ["h","a","k"], ["k","a","h"], ["a","k","h"], ["h","k","a"], ["k","h","a"]]
+
+result := permutations.generate("ted", true)
+; => ["ahk", "hak", "kah", "akh", "hka", "kha"]
+
+result := permutations.generate(["Auto", "Hot", "key"], true)
+; => ["AutoHotkey", "HotAutokey", "keyAutoHot", "AutokeyHot", "HotkeyAuto", "keyHotAuto"]
+
+result := permutations.generate("AutoHotkey", true, 3)
+; => ["AutoHotkey", "uAtoHotkey", "tAuoHotkey"]
 ```
 
 ## API
