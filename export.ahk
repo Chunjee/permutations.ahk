@@ -3,7 +3,7 @@ class permutations {
 	generate(param_array, param_stringOut:=false, param_maxPermutations:="") {
 		savedBatchLines := A_BatchLines
 
-		; prepare inputs
+		; prepare
 		if (!IsObject(param_array)) {
 			param_array := StrSplit(param_array)
 		}
@@ -29,9 +29,9 @@ class permutations {
 		SetBatchLines, % savedBatchLines
 		return l_outArrayStringified
 	}
-	
+
 	_gen(param_n:="", param_array:="", param_maxPermutations:="") {
-		; prepare defaults
+		; prepare
 		if (param_n == "") {
 			param_n := param_array.Count()
 		}

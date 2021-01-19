@@ -4,7 +4,6 @@ SetBatchLines, -1
 #Include %A_ScriptDir%\..\export.ahk
 #Include %A_ScriptDir%\..\node_modules
 #Include unit-testing.ahk\export.ahk
-#Include biga.ahk\export.ahk
 
 assert := new unittesting()
 
