@@ -2,6 +2,7 @@ class permutations {
 	; --- Static Methods ---
 	generate(param_array, param_stringOut:=false, param_maxPermutations:="") {
 		savedBatchLines := A_BatchLines
+		setBatchLines, -1
 
 		; prepare
 		if (!IsObject(param_array)) {
@@ -10,8 +11,7 @@ class permutations {
 
 		; create
 		this.outArray := []
-		l_length := param_array.Count()
-		l_permutationsArray := this._gen(l_length, param_array.Clone(), param_maxPermutations)
+		l_permutationsArray := this._gen(param_array.Count(), param_array.Clone(), param_maxPermutations)
 
 		; return array of arrays if user didn't specify param_stringOut
 		if (param_stringOut == false) {
@@ -59,9 +59,8 @@ class permutations {
 	}
 
 	_swap(param_array, param_index1, param_index2) {
-		tempVar := param_array[param_index1]
+		local tempVar := param_array[param_index1]
 		param_array[param_index1] := param_array[param_index2]
 		param_array[param_index2] := tempVar
-		return param_array
 	}
 }
